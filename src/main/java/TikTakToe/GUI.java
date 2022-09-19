@@ -1,6 +1,6 @@
 package TikTakToe;
 
-
+//Vermerk
 public class GUI extends javax.swing.JFrame { 
     
     private SpielCtr spielCtr;
