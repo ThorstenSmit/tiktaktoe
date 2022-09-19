@@ -1,7 +1,7 @@
 package TikTakToe;
 
 
-public class Spielstand {
+public class Spielstand { 
     
     public static boolean isDrueckbar(Spielfeld spielfeld, int xPos, int yPos){
         return true;

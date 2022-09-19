@@ -2,7 +2,7 @@ package TikTakToe;
 
 public class SpielCtr {
     
-    private Spielfeld spielfeld;
+    private Spielfeld spielfeld; 
     private Boolean spielerAmZug;
 
     public SpielCtr() {

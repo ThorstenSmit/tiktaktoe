@@ -3,7 +3,7 @@ package TikTakToe;
 import javax.swing.Icon;
 
 
-public class Kaestchen {
+public class Kaestchen { 
     
     private boolean isKreis;
     private Icon icon;

@@ -1,6 +1,6 @@
 package TikTakToe;
 
-public class Spielfeld {
+public class Spielfeld { 
     
     private Kaestchen[][] kaestechenListe;
 
