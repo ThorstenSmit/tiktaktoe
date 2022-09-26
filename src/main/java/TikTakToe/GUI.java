@@ -3,6 +3,8 @@ package TikTakToe;
 
 public class GUI extends javax.swing.JFrame { 
     
+    //Dies ist ein Vermerk
+    //
     private SpielCtr spielCtr;
 
     public GUI() {
