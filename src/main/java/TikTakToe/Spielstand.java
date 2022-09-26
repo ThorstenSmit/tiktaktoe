@@ -3,11 +3,7 @@ package TikTakToe;
 public class Spielstand {
 
     public static boolean isDrueckbar(Spielfeld spielfeld, int xPos, int yPos) {
-        if (spielfeld.getKaestechenListe()[xPos][yPos] == null) {
-            return true;
-        } else {
-            return false;
-        }
+        return spielfeld.getKaestechenListe()[xPos][yPos] == null;
     }
 
     public static boolean isFeldVoll(Spielfeld spielfeld) {
