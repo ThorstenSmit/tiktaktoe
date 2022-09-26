@@ -4,7 +4,7 @@ import javax.swing.Icon;
 
 
 public class Kaestchen { 
-     
+    
     private boolean isKreis;
     private Icon icon;
 
