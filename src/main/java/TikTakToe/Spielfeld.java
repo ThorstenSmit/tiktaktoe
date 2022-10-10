@@ -12,7 +12,7 @@ public class Spielfeld {
         return kaestechenListe;
     }
     
-    public boolean setKaestchen(int xPos, int yPos){
+    public boolean setKaestchen(Kaestchen kaestchen, int xPos, int yPos){
         return true;
     }
     
