@@ -1,19 +1,51 @@
 package TikTakToe;
 
 //Vermerk
-public class GUI extends javax.swing.JFrame { 
-    
+public class GUI extends javax.swing.JFrame {
+
     //Dies ist ein Vermerk
     //
     private SpielCtr spielCtr;
+    private javax.swing.JButton[][] jSpielButtonMatrix;
 
     public GUI() {
         this.spielCtr = new SpielCtr();
         initComponents();
     }
-    
-    public void resetGUI(){
+
+    public void buildButtonMatrix() {
+        javax.swing.JButton[][] buttonMatrixTemp = {
+            {
+                this.jSpielButton1,
+                this.jSpielButton2,
+                this.jSpielButton3
+            },
+            {
+                this.jSpielButton4,
+                this.jSpielButton5,
+                this.jSpielButton6
+            },
+            {
+                this.jSpielButton7,
+                this.jSpielButton8,
+                this.jSpielButton9
+            }
+        };
+        this.jSpielButtonMatrix = buttonMatrixTemp;
+    }
+
+    public void resetGUI() {
         this.initComponents();
+    }
+
+    public void refreshButtonMatrix(Kaestchen[][] kaestchenMatrix) {
+        for (int idxSpalte = 0; idxSpalte < 3; idxSpalte++) {
+            for (int idxReihe = 0; idxReihe < 3; idxReihe++) {
+                if (kaestchenMatrix[idxSpalte][idxReihe] != null) {
+                    this.jSpielButtonMatrix[idxSpalte][idxReihe].setIcon(kaestchenMatrix[idxSpalte][idxReihe].getIcon());
+                }
+            }
+        }
     }
 
     @SuppressWarnings("unchecked")
@@ -142,7 +174,7 @@ public class GUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jSpielButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jSpielButton1ActionPerformed
-        // TODO add your handling code here:
+        this.spielCtr.spielFeldButtonGedrueckt(0, 0);
     }//GEN-LAST:event_jSpielButton1ActionPerformed
 
     private void jSpielButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jSpielButton3ActionPerformed
@@ -200,6 +232,7 @@ public class GUI extends javax.swing.JFrame {
             }
         });
     }
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;

@@ -18,7 +18,12 @@ public class SpielCtr {
     }
     
     public boolean spielFeldButtonGedrueckt(int xPos, int yPos){
-        return true;
+        if(this.spielfeld.setKaestchen(this.spielerAmZug, xPos, yPos)){
+            System.out.println("Eins");
+            this.wechselSpieler();
+            return true;
+        }
+        return false;
     }
     
     public void wechselSpieler(){

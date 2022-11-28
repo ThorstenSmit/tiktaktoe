@@ -1,7 +1,7 @@
 package TikTakToe;
 
-public class Spielfeld { 
-    
+public class Spielfeld {
+
     private Kaestchen[][] kaestechenListe;
 
     public Spielfeld() {
@@ -11,9 +11,13 @@ public class Spielfeld {
     public Kaestchen[][] getKaestechenListe() {
         return kaestechenListe;
     }
-    
-    public boolean setKaestchen(Kaestchen kaestchen, int xPos, int yPos){
-        return true;
+
+    public boolean setKaestchen(boolean spielerAmZug, int xPos, int yPos) {
+        if (this.getKaestechenListe()[xPos][yPos] == null) {
+            this.kaestechenListe[xPos][yPos] = new Kaestchen(spielerAmZug);
+            return true;
+        }
+        return false;
     }
-    
+
 }
