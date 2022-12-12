@@ -47,9 +47,9 @@
                               <Group type="103" groupAlignment="1" attributes="0">
                                   <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                                   <Group type="102" attributes="0">
-                                      <Component id="jSpielButton2" min="-2" pref="100" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Component id="jSpielButton1" min="-2" pref="100" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="jSpielButton2" min="-2" pref="100" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -69,8 +69,8 @@
               <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jSpielButton1" alignment="3" pref="100" max="32767" attributes="0"/>
                   <Component id="jSpielButton2" alignment="3" pref="100" max="32767" attributes="0"/>
+                  <Component id="jSpielButton1" alignment="3" pref="100" max="32767" attributes="0"/>
                   <Component id="jSpielButton3" alignment="3" pref="100" max="32767" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -109,12 +109,12 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="jSpielButton1">
+    <Component class="javax.swing.JButton" name="jSpielButton2">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jSpielButton1ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jSpielButton2ActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="jSpielButton2">
+    <Component class="javax.swing.JButton" name="jSpielButton1">
     </Component>
     <Component class="javax.swing.JButton" name="jSpielButton3">
       <Events>

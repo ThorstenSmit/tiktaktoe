@@ -16,8 +16,8 @@ public class GUI extends javax.swing.JFrame {
     public void buildButtonMatrix() {
         javax.swing.JButton[][] buttonMatrixTemp = {
             {
-                this.jSpielButton1,
                 this.jSpielButton2,
+                this.jSpielButton1,
                 this.jSpielButton3
             },
             {
@@ -54,8 +54,8 @@ public class GUI extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
-        jSpielButton1 = new javax.swing.JButton();
         jSpielButton2 = new javax.swing.JButton();
+        jSpielButton1 = new javax.swing.JButton();
         jSpielButton3 = new javax.swing.JButton();
         jSpielButton4 = new javax.swing.JButton();
         jSpielButton5 = new javax.swing.JButton();
@@ -76,9 +76,9 @@ public class GUI extends javax.swing.JFrame {
             }
         });
 
-        jSpielButton1.addActionListener(new java.awt.event.ActionListener() {
+        jSpielButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jSpielButton1ActionPerformed(evt);
+                jSpielButton2ActionPerformed(evt);
             }
         });
 
@@ -138,9 +138,9 @@ public class GUI extends javax.swing.JFrame {
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(jLabel1)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jSpielButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jSpielButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(18, 18, 18)
-                                        .addComponent(jSpielButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addComponent(jSpielButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addGap(18, 18, 18)
                                 .addComponent(jSpielButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addGap(53, 53, 53))
@@ -152,8 +152,8 @@ public class GUI extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addGap(43, 43, 43)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jSpielButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
                     .addComponent(jSpielButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+                    .addComponent(jSpielButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
                     .addComponent(jSpielButton3, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -173,9 +173,9 @@ public class GUI extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jSpielButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jSpielButton1ActionPerformed
+    private void jSpielButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jSpielButton2ActionPerformed
         this.spielCtr.spielFeldButtonGedrueckt(0, 0);
-    }//GEN-LAST:event_jSpielButton1ActionPerformed
+    }//GEN-LAST:event_jSpielButton2ActionPerformed
 
     private void jSpielButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jSpielButton3ActionPerformed
         // TODO add your handling code here:
