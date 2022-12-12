@@ -9,15 +9,16 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JButton[][] jSpielButtonMatrix;
 
     public GUI() {
-        this.spielCtr = new SpielCtr();
+        this.spielCtr = new SpielCtr(this);
         initComponents();
+        this.buildButtonMatrix();
     }
 
     public void buildButtonMatrix() {
         javax.swing.JButton[][] buttonMatrixTemp = {
             {
-                this.jSpielButton2,
                 this.jSpielButton1,
+                this.jSpielButton2,
                 this.jSpielButton3
             },
             {
@@ -42,6 +43,7 @@ public class GUI extends javax.swing.JFrame {
         for (int idxSpalte = 0; idxSpalte < 3; idxSpalte++) {
             for (int idxReihe = 0; idxReihe < 3; idxReihe++) {
                 if (kaestchenMatrix[idxSpalte][idxReihe] != null) {
+                    System.out.println(this.jSpielButtonMatrix[idxSpalte][idxReihe]);
                     this.jSpielButtonMatrix[idxSpalte][idxReihe].setIcon(kaestchenMatrix[idxSpalte][idxReihe].getIcon());
                 }
             }
@@ -82,9 +84,21 @@ public class GUI extends javax.swing.JFrame {
             }
         });
 
+        jSpielButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jSpielButton1ActionPerformed(evt);
+            }
+        });
+
         jSpielButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jSpielButton3ActionPerformed(evt);
+            }
+        });
+
+        jSpielButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jSpielButton4ActionPerformed(evt);
             }
         });
 
@@ -97,6 +111,12 @@ public class GUI extends javax.swing.JFrame {
         jSpielButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jSpielButton6ActionPerformed(evt);
+            }
+        });
+
+        jSpielButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jSpielButton7ActionPerformed(evt);
             }
         });
 
@@ -174,32 +194,44 @@ public class GUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jSpielButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jSpielButton2ActionPerformed
-        this.spielCtr.spielFeldButtonGedrueckt(0, 0);
+        this.spielCtr.spielFeldButtonGedrueckt(0, 1);
     }//GEN-LAST:event_jSpielButton2ActionPerformed
 
     private void jSpielButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jSpielButton3ActionPerformed
-        // TODO add your handling code here:
+        this.spielCtr.spielFeldButtonGedrueckt(0, 2);
     }//GEN-LAST:event_jSpielButton3ActionPerformed
 
     private void jSpielButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jSpielButton5ActionPerformed
-        // TODO add your handling code here:
+        this.spielCtr.spielFeldButtonGedrueckt(1, 1);
     }//GEN-LAST:event_jSpielButton5ActionPerformed
 
     private void jSpielButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jSpielButton6ActionPerformed
-        // TODO add your handling code here:
+        this.spielCtr.spielFeldButtonGedrueckt(1, 2);
     }//GEN-LAST:event_jSpielButton6ActionPerformed
 
     private void jSpielButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jSpielButton8ActionPerformed
-        // TODO add your handling code here:
+        this.spielCtr.spielFeldButtonGedrueckt(2, 1);
     }//GEN-LAST:event_jSpielButton8ActionPerformed
 
     private void jSpielButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jSpielButton9ActionPerformed
-        // TODO add your handling code here:
+        this.spielCtr.spielFeldButtonGedrueckt(2, 2);
     }//GEN-LAST:event_jSpielButton9ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+        this.spielCtr.neuesSpielfeld();
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jSpielButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jSpielButton1ActionPerformed
+        this.spielCtr.spielFeldButtonGedrueckt(0, 0);
+    }//GEN-LAST:event_jSpielButton1ActionPerformed
+
+    private void jSpielButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jSpielButton4ActionPerformed
+        this.spielCtr.spielFeldButtonGedrueckt(1, 0);
+    }//GEN-LAST:event_jSpielButton4ActionPerformed
+
+    private void jSpielButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jSpielButton7ActionPerformed
+        this.spielCtr.spielFeldButtonGedrueckt(2, 0);
+    }//GEN-LAST:event_jSpielButton7ActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
